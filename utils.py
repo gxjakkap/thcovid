@@ -69,3 +69,20 @@ async def try_upload_file(client, channel, file_path, content=None,
                                  "Oops, something happened. Please try again.")
 
     return sent_msg
+
+
+
+# Custom function to check if user input is a valid province name
+def checkprovincevalidity(input):
+    thai_pr = ["กรุงเทพมหานคร", "กระบี่", "กาญจนบุรี", "กาฬสินธุ์", "กำแพงเพชร", "ขอนแก่น", "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี", "ชัยนาท", "ชัยภูมิ", "ชุมพร ", "เชียงราย", "เชียงใหม่", "ตรัง", "ตราด", "ตาก", "นครนายก", "นครปฐม", "นครพนม", "นครราชสีมา", "นครศรีธรรมราช", "นครสวรรค์", "นนทบุรี", "นราธิวาส", "น่าน", "บึงกาฬ", "บุรีรัมย์", "ปทุมธานี", "ประจวบคีรีขันธ์", "ปราจีนบุรี", "ปัตตานี", "พระนครศรีอยุธยา", "พะเยา", "พังงา", "พัทลุง", "พิจิตร", "พิษณุโลก", "เพชรบุรี", "เพชรบูรณ์", "แพร่", "ภูเก็ต", "มหาสารคาม", "มุกดาหาร", "แม่ฮ่องสอน", "ยโสธร", "ยะลา", "ร้อยเอ็ด", "ระนอง", "ระยอง", "ราชบุรี", "ลพบุรี", "ลำปาง", "ลำพูน", "เลย", "ศรีสะเกษ", "สกลนคร", "สงขลา", "สตูล", "สมุทรปราการ", "สมุทรสงคราม", "สมุทรสาคร", "สระแก้ว", "สระบุรี", "สิงห์บุรี", "สุโขทัย", "สุพรรณบุรี", "สุราษฎร์ธานี", "สุรินทร์", "หนองคาย", "หนองบัวลำภู", "อ่างทอง", "อำนาจเจริญ", "อุดรธานี", "อุตรดิตถ์", "อุทัยธานี", "อุบลราชธานี"]
+    eng_pr = ["BANGKOK","KRABI","KANCHANABURI","KALASIN","KAMPHAENG PHET","KHON KAEN","CHANTHABURI","CHACHOENGSAO","CHON BURI","CHAI NAT","CHAIYAPHUM","CHUMPHON","CHIANG RAI","CHIANG MAI","TRANG","TRAT","TAK","NAKHON NAYOK","NAKHON PATHOM","NAKHON PHANOM","NAKHON RATCHASIMA","NAKHON SI THAMMARAT","NAKHON SAWAN","NONTHABURI","NARATHIWAT","NAN","BUENG KAN","BURI RAM","PATHUM THANI","PRACHUAP KHIRI KHAN","PRACHIN BURI","PATTANI","PHRA NAKHON SI AYUTTHAYA","PHAYAO","PHANGNGA","PHATTHALUNG","PHICHIT","PHITSANULOK","PHETCHABURI","PHETCHABUN","PHRAE","PHUKET","MAHA SARAKHAM","MUKDAHAN","MAE HONG SON","YASOTHON","YALA","ROI ET","RANONG","RAYONG","RATCHABURI","LOP BURI","LAMPANG","LAMPHUN","LOEI","SI SA KET","SAKON NAKHON","SONGKHLA","SATUN","SAMUT PRAKAN","SAMUT SONGKHRAM","SAMUT SAKHON","SA KAEO","SARABURI","SING BURI","SUKHOTHAI","SUPHAN BURI","SURAT THANI","SURIN","NONG KHAI","NONG BUA LAM PHU","ANG THONG","AMNAT CHAROEN","UDON THANI","UTTARADIT","UTHAI THANI","UBON RATCHATHANI"]
+    eng_abr = []
+
+    if input in thai_pr:
+        return [True, input]
+    elif input.upper() in eng_pr:
+        return [True, thai_pr[eng_pr.index(input.upper())]]
+    elif input in eng_abr:
+        return [True, thai_pr[eng_pr.index(input)]]
+    else:
+        return [False]

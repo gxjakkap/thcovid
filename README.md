@@ -1,6 +1,6 @@
 # thCovid
 
->[กดที่นี่เพื่อไปที่ README แบบภาษาไทย](https://github.com/gxjakkap/thcovid/blob/main/README-TH.md)
+>[กดที่นี่เพื่อไปที่ README แบบภาษาไทย](https://github.com/gxjakkap/thcovid/blob/main/additional-md/README-TH.md)
 
 Discord bot for getting Thai Covid-19 Information.
 
