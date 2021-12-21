@@ -22,7 +22,7 @@
 
 2. gbp (get by province)
 
-วิธีการใช้: `gbp [ชื่อจังหวัดเป็นภาษาไทย]` คลิก [ที่นี่](https://www.govesite.com/uploads/20150616220039Pp9UPrr/20180720112427_3_hDHa8tk.pdf) สำหรับชื่อจังหวัดทั้งหมด.
+วิธีการใช้: `gbp [ชื่อจังหวัดเป็นภาษาไทย]` คลิก [ที่นี่](https://github.com/gxjakkap/thcovid/blob/main/additional-md/valid-province-TH.md) สำหรับชื่อจังหวัด.
 
 แสดงข้อมูลสถานการณ์ Covid-19 ของจังหวัดนั้นๆ
 
