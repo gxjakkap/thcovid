@@ -20,7 +20,7 @@ Usage: `today`
 
 Display Thailand Covid-19 situation for that day.
 
-    ![today](https://ibb.co/GC4qz15)
+![today](https://ibb.co/GC4qz15)
 
 2. gbp (get by province)
 
@@ -28,7 +28,7 @@ Usage: `gbp [Province name in Thai]` Click [here](https://www.govesite.com/uploa
 
 Display Thailand Covid-19 situation for province specified.
 
-    ![gbp](https://ibb.co/JnpnK9x)
+![gbp](https://ibb.co/JnpnK9x)
 
 ## Credits
 

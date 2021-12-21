@@ -18,7 +18,7 @@
 
 แสดงข้อมูลสถานการณ์ Covid-19 ของประเทศไทยในวันดังกล่าว
 
-    ![today](https://ibb.co/GC4qz15)
+![today](https://ibb.co/GC4qz15)
 
 2. gbp (get by province)
 
@@ -26,7 +26,7 @@
 
 แสดงข้อมูลสถานการณ์ Covid-19 ของจังหวัดนั้นๆ
 
-    ![gbp](https://ibb.co/JnpnK9x)
+![gbp](https://ibb.co/JnpnK9x)
 
 ## เครดิต
 
