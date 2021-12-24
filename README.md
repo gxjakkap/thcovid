@@ -24,7 +24,7 @@ Display Thailand Covid-19 situation for that day.
 
 2. gbp (get by province)
 
-Usage: `gbp [Province name in Thai]` Click [here](https://github.com/gxjakkap/thcovid/blob/main/additional-md/valid-province.md) for a valid province name.
+Usage: `gbp <Province name>` Click [here](https://github.com/gxjakkap/thcovid/blob/main/additional-md/valid-province.md) for a valid province name.
 
 Display Thailand Covid-19 situation for province specified.
 
