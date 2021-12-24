@@ -1,7 +1,7 @@
 import sys
 import requests
 import settings
-import discord
+import nextcord
 import message_handler
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
@@ -23,7 +23,7 @@ sched = AsyncIOScheduler()
 def main():
     # Initialize the client
     print("Starting up...")
-    client = discord.Client()
+    client = nextcord.Client()
 
     # Define event handlers for the client
     # on_ready may be called multiple times in the event of a reconnect,
@@ -38,7 +38,7 @@ def main():
         r = requests.get('https://covid19.ddc.moph.go.th/api/Cases/today-cases-all')
         ans = r.json()
         nc = ans[0]['new_case']
-        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f'{nc:,} new Covid cases'))
+        await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name=f'{nc:,} new Covid cases'))
         print("Logged in!", flush=True)
         # Load all events
         print("Loading events...", flush=True)

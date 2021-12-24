@@ -1,7 +1,7 @@
 from os.path    import join
 from os         import remove
 
-from discord    import HTTPException
+from nextcord    import HTTPException
 from emoji      import emojize
 
 import settings

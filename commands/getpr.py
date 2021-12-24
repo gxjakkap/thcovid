@@ -1,5 +1,5 @@
 import requests
-import discord
+import nextcord
 from commands.base_command  import BaseCommand
 from utils import checkprovincevalidity
 
@@ -34,7 +34,7 @@ class gbp(BaseCommand):
                 else:
                     i+=1
         if exist:
-            embed=discord.Embed(title="สถานการณ์ COVID-19 จังหวัด"+ans[i]['province'])
+            embed=nextcord.Embed(title="สถานการณ์ COVID-19 จังหวัด"+ans[i]['province'])
             embed.add_field(name="🚑เคสใหม่", value=f"{ans[i]['new_case']:,}", inline=False)
             embed.add_field(name="🚑เคสใหม่ (ยกเว้นเดินทางจากต่างประเทศ)", value=f"{ans[i]['new_case_excludeabroad']:,}", inline=False)
             embed.add_field(name="🏥เคสสะสม", value=f"{ans[i]['total_case']:,}", inline=False)

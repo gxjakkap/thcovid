@@ -1,5 +1,5 @@
 import requests
-import discord
+import nextcord
 from commands.base_command  import BaseCommand
 
 class today(BaseCommand):
@@ -15,7 +15,7 @@ class today(BaseCommand):
         url = 'https://covid19.ddc.moph.go.th/api/Cases/today-cases-all'
         r = requests.get(url)
         ans = r.json()
-        embed=discord.Embed(title="รายงานสถานการณ์ COVID-19 ประจำวัน")
+        embed=nextcord.Embed(title="รายงานสถานการณ์ COVID-19 ประจำวัน")
         embed.add_field(name="🚑เคสใหม่", value=f"{ans[0]['new_case']:,}", inline=False)
         embed.add_field(name="🚑เคสใหม่ (ยกเว้นเดินทางจากต่างประเทศ)", value=f"{ans[0]['new_case_excludeabroad']:,}", inline=False)
         embed.add_field(name="🏥เคสสะสม", value=f"{ans[0]['total_case']:,}", inline=False)

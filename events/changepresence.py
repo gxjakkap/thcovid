@@ -1,5 +1,5 @@
 import requests
-import discord
+import nextcord
 from events.base_event      import BaseEvent
 
 
@@ -13,4 +13,4 @@ class ChangePresence(BaseEvent):
         r = requests.get('https://covid19.ddc.moph.go.th/api/Cases/today-cases-all')
         ans = r.json()
         nc = ans[0]['total_case']
-        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f'{nc:,} new Covid cases'))
+        await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name=f'{nc:,} new Covid cases'))
