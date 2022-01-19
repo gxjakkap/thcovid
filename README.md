@@ -33,3 +33,7 @@ Display Thailand Covid-19 situation for province specified.
 ## Credits
 
 [agubelu/discord-bot-template](https://github.com/agubelu/discord-bot-template) : Blank bot template used.
+
+## License
+
+[GNU General Public License V.3](https://github.com/gxjakkap/thcovid/blob/main/LICENSE)
