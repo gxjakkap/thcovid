@@ -34,6 +34,7 @@ class gbp(BaseCommand):
                 else:
                     i+=1
         if exist:
+            updated_text = f"{ans[i]['update_date']} GMT+7"
             embed=nextcord.Embed(title="สถานการณ์ COVID-19 จังหวัด"+ans[i]['province'])
             embed.add_field(name="🚑เคสใหม่", value=f"{ans[i]['new_case']:,}", inline=False)
             embed.add_field(name="🚑เคสใหม่ (ยกเว้นเดินทางจากต่างประเทศ)", value=f"{ans[i]['new_case_excludeabroad']:,}", inline=False)
@@ -41,7 +42,8 @@ class gbp(BaseCommand):
             embed.add_field(name="🏥เคสสะสม (ยกเว้นเดินทางจากต่างประเทศ)", value=f"{ans[i]['total_case_excludeabroad']:,}", inline=False)
             embed.add_field(name="🪦เสียชีวิต", value=f"{ans[i]['new_death']:,}", inline=False)
             embed.add_field(name="🪦เสียชีวิตสะสม", value=f"{ans[i]['total_death']:,}", inline=False)
-            embed.add_field(name="📅ข้อมูลอัปเดตล่าสุด", value=ans[i]['update_date'], inline=False)
+            embed.add_field(name="📅ข้อมูลอัปเดตล่าสุด", value=updated_text, inline=False)
             embed.set_footer(text="ข้อมูลจาก covid19.ddc.moph.go.th")
             #await asyncio.gather(message.author.mention, message.channel.send(embed=embed))
+            await message.author.mention
             await message.channel.send(embed=embed)
